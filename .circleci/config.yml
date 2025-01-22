@@ -16,7 +16,7 @@ jobs:
           command: "docker build -t inane-inaccompli/node-js-sample ."
       - run:
           name: "Exécution du script"
-          command: "docker run inane-inaccompli/node-js-sample"
+          command: "docker run -p 8080:8080 --name conteneur_test inane-inaccompli/node-js-sample"
       - run:
           name: "Vérification du conteneur"
           command: "curl localhost:8080"
