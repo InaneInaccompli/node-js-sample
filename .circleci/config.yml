@@ -20,6 +20,9 @@ jobs:
       - run:
           name: "Vérification du conteneur"
           command: "curl localhost:8080"
+      - run:
+          name: "Push de l'image"
+          command: "docker push inane-inaccompli/node-js-sample"
 
 workflows:
   say-hello-workflow:
