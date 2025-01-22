@@ -12,6 +12,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: ""
+          command: "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
+      - run:
           name: "Création de l'image"
           command: "docker build -t nave145/node-js-sample ."
       - run:
